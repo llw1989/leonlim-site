@@ -15,9 +15,16 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title",           name: "title",       widget: "string" }
-      - { label: "Publish Date",    name: "date",        widget: "datetime" }
-      - { label: "Cover Image",     name: "image",       widget: "image", required: false }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
       - label: "Category"
         name: "category"
         widget: "select"
@@ -27,8 +34,17 @@ collections:
           - "Property Strategy"
           - "Investment Tips"
           - "Case Study"
-      - { label: "Summary",         name: "summary",     widget: "text" }
-      - { label: "Body",            name: "body",        widget: "markdown" }
-      - { label: "SEO Meta Title",  name: "meta_title",  widget: "string",  required: false }
-      - { label: "SEO Description", name: "meta_desc",   widget: "text",    required: false }
-```
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "SEO Meta Title"
+        name: "meta_title"
+        widget: "string"
+        required: false
+      - label: "SEO Description"
+        name: "meta_desc"
+        widget: "text"
+        required: false

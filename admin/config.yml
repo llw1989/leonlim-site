@@ -5,7 +5,6 @@ backend:
   base_url: https://leon-cms-auth.llw1989.workers.dev
   auth_endpoint: api/auth
 
-# Where uploaded images get stored
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
@@ -28,7 +27,8 @@ collections:
           - "Property Strategy"
           - "Investment Tips"
           - "Case Study"
-      - { label: "Summary",         name: "summary",     widget: "text",  hint: "1–2 sentences shown on the blog listing page. Keep it under 160 characters for SEO." }
+      - { label: "Summary",         name: "summary",     widget: "text" }
       - { label: "Body",            name: "body",        widget: "markdown" }
-      - { label: "SEO Meta Title",  name: "meta_title",  widget: "string",   required: false, hint: "Leave blank to use the post title. Max 60 characters." }
-      - { label: "SEO Description", name: "meta_desc",   widget: "text",     required: false, hint: "Max 155 characters. This appears in Google search results." }
+      - { label: "SEO Meta Title",  name: "meta_title",  widget: "string",  required: false }
+      - { label: "SEO Description", name: "meta_desc",   widget: "text",    required: false }
+```

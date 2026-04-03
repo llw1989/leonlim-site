@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: llw1989/leonlim-site   # ← replace with your actual GitHub username
+  repo: llw1989/leonlim-site
   branch: main
+  base_url: https://leonlim.sg
+  auth_endpoint: api/auth
 
 # Where uploaded images get stored
 media_folder: "images/uploads"

@@ -2,7 +2,7 @@ backend:
   name: github
   repo: llw1989/leonlim-site
   branch: main
-  base_url: https://leonlim.sg
+  base_url: https://leon-cms-auth.llw1989.workers.dev
   auth_endpoint: api/auth
 
 # Where uploaded images get stored

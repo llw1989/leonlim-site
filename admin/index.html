@@ -7,6 +7,12 @@
   <title>Leon Lim | Admin</title>
 </head>
 <body>
+  <script>
+    // Listen for auth message from popup
+    window.addEventListener("message", function(e) {
+      console.log("Message received:", e.data);
+    });
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>

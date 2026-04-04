@@ -8,9 +8,21 @@
 </head>
 <body>
   <script>
-    // Listen for auth message from popup
     window.addEventListener("message", function(e) {
       console.log("Message received:", e.data);
+      if (e.data && typeof e.data === "string" && e.data.includes("authorization:github:success")) {
+        try {
+          const parts = e.data.split("authorization:github:success:");
+          const tokenData = JSON.parse(parts[1]);
+          localStorage.setItem("decap-cms-user", JSON.stringify({
+            token: tokenData.token,
+            provider: "github"
+          }));
+          window.location.reload();
+        } catch(err) {
+          console.log("Parse error:", err);
+        }
+      }
     });
   </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
